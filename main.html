@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+
+    <title>Phesephone</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /*navbar section */
+        .nav_style {
+            background-color: #fff !important;
+            box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.35) !important;
+        }
+
+        .navbar {
+            font-size: 19px;
+            margin: 0 5px;
+        }
+
+        .navbar-brand {
+            max-width: 290px;
+            height: 100px;
+            margin-left: 20px;
+            filter: brightness(0%);
+        }
+
+        .navbar-nav a {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: rgb(32, 29, 29) !important;
+        }
+
+        .navbar-nav a::before {
+            content: '';
+            position: absolute;
+            top: 70%;
+            bottom: 50px;
+            width: 0%;
+            height: 3px;
+            background-color: #808080;
+            transition: all 0.3s linear;
+        }
+
+        .navbar-nav a:hover::before {
+            width: 75%;
+        }
+
+        .navbar-nav .search:hover::before {
+            width: 0% !important;
+        }
+
+        /* Hero img section */
+        section .full-img {
+            background: url(../navbars/phosphene/Temp_Hero123.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
+            height: 50vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        section .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(36, 35, 35, 0.5);
+            width: 30%;
+        }
+
+        section .content h3 {
+            padding: 25% 10% 25% 20%;
+            font-size: 45px;
+            word-spacing: 5px;
+            line-height: 1.3;
+        }
+
+        /*paragraph section  and button*/
+        .main_artical p {
+            font-size: 27px;
+            font-family: 'Source Sans Pro Regular', sans-serif !important;
+            font-weight: 600;
+            padding-right: 100px;
+            line-height: 1.2;
+        }
+
+        .btn {
+            background-color: #50c875;
+        }
+
+        .media_group {
+            text-transform: capitalize;
+        }
+
+        h1 {
+            font-size: 50px !important;
+            font-weight: 900 !important;
+            font-style: bolder;
+
+        }
+
+        section .img-box img {
+            height: 210px;
+            overflow-x: hidden;
+        }
+
+        section .box-content {
+            text-align: left;
+            padding-right: 200px;
+        }
+
+        .media_group .text-right {
+            text-align: right;
+            padding-left: 190px;
+        }
+
+
+        /*carousel section */
+
+        .carousel_section .slide {
+            height: 350px;
+            margin-top: 100px;
+        }
+
+        .carousel_section .carousel-inner img {
+            max-width: 250px;
+        }
+
+        .carousel_section .carousel-inner .carousel-caption p {
+            font-size: 31px !important;
+            margin-left: 60px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .carousel_section .carousel-inner .carousel-caption h5 {
+            font-style: italic;
+            margin-right: 35% !important;
+        }
+
+        .carousel_section .slide .carousel-indicators .btn1 {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: #333;
+            margin-left: 30px;
+            margin-top: 50% !important;
+        }
+
+        .carousel_section .slide .carousel-indicators .btn1:active {
+            background-color: #50c875;
+
+
+        }
+
+        /*ideas section */
+        .ideas .img-box2 img {
+            border-bottom: 8px solid #50c875;
+
+        }
+
+        .ideas .img-box2 h1 {
+            font-size: 38px !important;
+        }
+
+        /*form section */
+        .contactus .form_1 input {
+            border: none;
+            outline: none !important;
+            border-bottom: 2px solid #333;
+            font-size: 27px;
+            font-weight: 500 !important;
+        }
+
+        .contactus .form_1 input:focus {
+            border-color: #333;
+        }
+
+        .contactus .form_1 input[placeholder] {
+            font-weight: 600;
+        }
+
+        .contactus .form_1 label {
+            font-size: 28px;
+            font-weight: 600;
+            font-family: 'Source Sans Pro Regular', sans-serif;
+        }
+
+        .contactus .form_1 textarea {
+            border: none;
+            outline: none !important;
+            border-bottom: 2px solid #333;
+            font-size: 31px;
+        }
+
+        footer p {
+            font-size: 38px;
+            color: #000;
+        }
+        footer div img{
+            width: 400px;
+
+        }
+        footer div figcaption{
+            font-size: 33px;
+            font-weight: 600;
+        }
+
+        h1* {
+            color: #333 !important;
+        }
+
+        /*responsive*/
+        /* Small devices (landscape phones, 576px)*/
+        @media(max-width: 576px) {
+            body {
+                overflow-x: hidden !important;
+            }
+
+            h1 {
+                font-size: 38px !important;
+            }
+
+            .navbar-brand {
+                max-width: 100px;
+                height: 100px;
+                padding-top: auto;
+            }
+
+            .toggler {
+                float: none;
+                height: 30px;
+                width: 30px;
+                padding: 10px 10px;
+                margin-top: -20px;
+                position: relative;
+            }
+
+            .icon {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                top: 10%;
+                right: 0;
+                left: 10%;
+            }
+
+            .nav_style {
+                padding-bottom: -50px !important;
+                margin-bottom: -100px !important;
+
+            }
+
+            .navbar-nav a {
+                font-size: 50% !important;
+                text-align: center !important;
+            }
+
+            /*hero img */
+            section .full-img {
+                height: 140px;
+                margin-top: 17%;
+            }
+
+            section .content h3 {
+                font-size: 80%;
+            }
+
+            /*main paragraph */
+            .main_artical p {
+                font-size: 19px !important;
+                padding: 20px 20px !important;
+            }
+
+            /*media img*/
+            section .img-box img {
+                height: 100%;
+            }
+
+            /*media paragraphs */
+
+            section .box-content {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .media_group .text-right {
+                text-align: left;
+                padding-left: 0;
+            }
+
+            /*carousel section*/
+            .carousel_section .slide {
+                height: 220px;
+            }
+
+            .carousel_section .slide .carousel-indicators .btn1 {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                border: 3px solid #50c875;
+                margin-left: 30px;
+
+            }
+
+            .carousel_section .carousel-inner img {
+                max-width: 150px;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption {
+                padding-top: 50px !important;
+                margin-left: 50px;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption {
+                padding-top: 50px !important;
+                margin-left: 50px;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption p {
+                font-size: 14px !important;
+                margin-left: 0;
+                padding-top: 100px;
+                text-align: left;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption h5 {
+                font-size: 15px !important;
+                font-style: italic;
+                margin-right: 30% !important;
+
+            }
+
+            /*ideas section */
+            .ideas .img-box2 h1 {
+                font-size: 22px !important;
+            }
+
+            .ideas .img-box2 h4 {
+                font-size: 14px !important;
+            }
+            /*footer */
+            footer p {
+            font-size: 26px !important;
+            color: #000;
+        }
+        footer div img{
+            width: 200px;
+            margin-left: 3%;
+        
+            filter: brightness(0);
+        }
+        footer div figcaption{
+            font-size: 18px;
+            font-weight: 600;
+        }
+            p {
+                font-size: 14px !important;
+            }
+        }
+
+        @media (min-width:580px) and (max-width:990px) {
+            .navbar-nav {
+                text-align: center !important;
+            }
+
+            .navbar-nav a:hover::before {
+                width: 0%;
+            }
+
+            /*hero img*/
+            section .full-img {
+                height: 250px;
+            }
+
+            section .content h3 {
+                font-size: 22px;
+            }
+
+            /* main paragraph*/
+            .main_artical p {
+                font-size: 18px;
+                text-align: left !important;
+                padding: 40px 20px;
+            }
+
+            /*media paragraphs */
+
+            section .box-content {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .media_group .text-right {
+                text-align: left;
+                padding-left: 0;
+            }
+
+            /*carousel section */
+            .carousel_section .carousel-inner .carousel-caption {
+                margin-left: 20px !important;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption p {
+                font-size: 20px !important;
+                padding-left: 80px !important;
+                padding-top: 100px;
+                text-align: left;
+            }
+
+            .carousel_section .carousel-inner .carousel-caption h5 {
+                font-size: 19px !important;
+                font-style: italic;
+                margin-left: 29% !important;
+
+            }
+
+            /*ideas section */
+            .ideas .img-box2 h1 {
+                font-size: 25px !important;
+            }
+
+            .ideas .img-box2 h4 {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar section-->
+    <header class="container-sm-fluid mx-auto nav_style">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../navbars/phosphene/logo.png" class="img-fluid mt-4" alt="">
+                        </a>
+                        <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ms-auto">
+                                <a class="nav-link active" aria-current="page" href="#about">About</a>
+                                <a class="nav-link " href="#work">Work</a>
+                                <a class="nav-link " href="#contact">Contact</a>
+                                <a class="nav-link " href="#ideas">Ideas</a>
+                                <a href="#" class="nav-link search">
+                                    <img src="../navbars/phosphene/Search_1.png" class="mb-2" width="40px" height="32px"
+                                        alt="search">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Hero img section-->
+    <section id="about">
+        <div class="container-fluid full-img">
+            <div class="content">
+                <h3 class="text-light">
+                    We are an <br>
+                    <span class="text-light fw-bolder">Insight & <br> Innovation</span><br>
+                    Agency
+                </h3>
+            </div>
+        </div>
+    </section>
+    <!--Paragraph section-->
+    <section class="main_artical">
+        <div class="container bg-light fw-bold">
+            <p class="pt-5">
+                phosphene is an independent thinking marketing & research agency. <br>
+                We focus on solving your marketing challange and driving your innovation agenda forward
+                using the art and science of human behavioral understanding. You may have heard it a
+                million times before, and let us say it too-we do not want to be a typical research agency
+                We do not want to follow anyt eshtablish norms. We are not blindly after digital platforms
+                or neuroscience just because they are breakthroughs and fascinating conversation pieces.
+                if there is one thing we chase vehemently here, it is pure common sense.
+            </p>
+            <button type="button" class="btn rounded-3 mt-md-4 me-md-5 py-md-2 px-md-5 text-light float-end">Know
+                More</button>
+        </div>
+    </section>
+    <!--Media group section-->
+    <section class="media_group bg-light" id="work">
+        <div class="container">
+            <h1 class=" mt-5 mb-3 text-uppercase">What we do</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--Media group row-1 section-->
+                    <div class="row my-4">
+                        <div class="img-box col-md h-50">
+                            <figure>
+                                <img src="../navbars/phosphene/Temp01.jpg" class="img-fluid" alt="img left">
+                            </figure>
+                        </div>
+                        <div class="box-content col-md-9 align-items-center">
+                            <h2 class=" fw-bolder fs-2">
+                                Marketing Research
+                            </h2>
+                            <p class="fs-4 fw-bold">
+                                We cab lap up your business challenges and identify ways
+                                market research techniques can be a solution. We find your
+                                insights. whether its qualitative or quantitative, online or
+                                offline. Ends matter a lot more.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Media group row-2 section-->
+                    <div class="row  my-4">
+                        <div class="img-box col-md h-50  order-md-2">
+                            <figure>
+                                <img src="../navbars/phosphene/Temp03.jpg" class="img-fluid" alt="img left">
+                            </figure>
+                        </div>
+                        <div class=" col-md-9  order-md-1">
+                            <h2 class=" fw-bolder fs-2 float-md-end">
+                                Innovation Consultancy
+                            </h2>
+                            <p class="fs-4 fw-bold float-md-end text-right">
+                                We can design and run workshops that incubate, fertilize
+                                and grow excellent ideas that can transform your business.
+                                we bring to the table UPADTE
+                            </p>
+                        </div>
+
+                    </div>
+                    <!--Media group row-3 section-->
+                    <div class="row  my-4">
+                        <div class="img-box col-md h-50  order-md-1">
+                            <figure>
+                                <img src="../navbars/phosphene/Temp04.jpg" class="img-fluid" alt="img left">
+                            </figure>
+                        </div>
+                        <div class="box-content col-md-9  order-md-1">
+                            <h2 class=" fw-bolder fs-2">
+                                Sensory Marketing
+                            </h2>
+                            <p class="fs-4 fw-bold">
+                                From delicate package research to product tasting, we
+                                utilize exciting sensory research techniques with global
+                                collaboration to access consumer's sensory response.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!--Media group row-4 section-->
+                    <div class="row  my-4 ">
+                        <div class="img-box col-md h-50 order-md-2">
+                            <figure>
+                                <img src="../navbars/phosphene/Temp07.jpg" class="img-fluid" alt="img left">
+                            </figure>
+                        </div>
+                        <div class="col-md-9 order-md-1">
+                            <h2 class=" fw-bolder fs-2 float-md-end">
+                                Cultural Studie
+                            </h2>
+                            <p class="text-right float-md-end fs-4 fw-bold">
+                                Over a decade of working experience in the middle eastern
+                                & North African marktes of help you understand this
+                                region's consumers via semiotics & enthnographies
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Carousel section-->
+    <section class="carousel_section">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-uppercase">Endorsements</h1>
+                <div class="col-md">
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active btn1" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" class="btn1" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" class="btn1" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner bg-light">
+                            <div class="carousel-item active">
+                                <img src="../navbars/phosphene/Temp_Profile_Pic1.jpg" class="d-block img-fluid"
+                                    alt="carousel-img1">
+                                <div class="carousel-caption text-black ">
+
+                                    <p class=" ps-5">"We are truly fortunate to discover Phosphene.it <br>
+                                        has been a very fruitful association for our <br>
+                                        oraganization.Highly recommended."</p>
+                                    <h5 class=" fs-2">Peter Ross, Figel Corp</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="../navbars/phosphene/Temp_Profile_Pic1.jpg" class="d-block img-fluid"
+                                    alt="carousel-img2">
+                                <div class="carousel-caption d-md-block text-black">
+                                    <p class=" ps-5">"We are truly fortunate to discover Phosphene.it <br>
+                                        has been a very fruitful association for our <br>
+                                        oraganization.Highly recommended."</p>
+
+                                    <h5 class="r fs-2">Peter Ross, Figel Corp</h5>
+                                </div>
+                            </div>
+                            <div class=" carousel-item">
+                                <img src="../navbars/phosphene/Temp_Profile_Pic1.jpg" class="d-block img-fluid "
+                                    alt="carousel-img3">
+                                <div class="carousel-caption d-md-block text-black">
+                                    <p class=" ps-5">"We are truly fortunate to discover Phosphene.it <br>
+                                        has been a very fruitful association for our <br>
+                                        oraganization.Highly recommended."</p>
+
+                                    <h5 class=" fs-2">Peter Ross, Figel Corp</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ideas mt-5" id="ideas">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-uppercase py-5">Ideas</h1>
+                <div class="col-6 img-box2">
+
+                    <figure>
+                        <img src="../navbars/phosphene/d1.jpg" alt="idea-img-1" class="img-fluid">
+                        <figcaption>
+                            <h1>
+                                Do you know what phosphenes are?
+                                <h4 class="text-muted">5 November 2017</h4>
+                            </h1>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <div class="col-6 img-box2">
+
+                    <figure>
+                        <img src="../navbars/phosphene/d2.jpg" alt="idea-img-2" class="img-fluid">
+                        <figcaption>
+                            <h1>
+                                Here we are! <br>
+                                This is our first post
+                                <h4 class="text-muted">12 Octobar 2017</h4>
+                            </h1>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+            <button class="btn rounded-3 mt-md-4 me-md-5 py-md-2 px-md-5 text-light float-end">More Ideas</button>
+        </div>
+
+    </section>
+    <section class="contactus my-5" id="contact">
+        <div class="container">
+            <h1 class="text-uppercase">Get in touch with us</h1>
+            <div class="row form_1 pt-5">
+                <div class="col form-floating">
+                    <input type="text" class="form-control" aria-label="Name" placeholder="Name" id="floatingInput"
+                        required>
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="col form-floating">
+                    <input type="text" class="form-control" aria-label="Company" placeholder="Company"
+                        id="floatingInput" required>
+                    <label for="floatingInput">Company</label>
+                </div>
+            </div>
+            <div class="row form_1 mt-5">
+                <div class="col form-floating">
+                    <input type="tel" class="form-control" aria-label="Phone" placeholder="Phone" id="floatingInput">
+                    <label for="floatingInput">Phone</label>
+                </div>
+                <div class="col form-floating">
+                    <input type="email" class="form-control" aria-label="Email" placeholder="Email" id="floatingInput"
+                        required>
+                    <label for="floatingInput">Email</label>
+                </div>
+            </div>
+            <div class="row form_1 mt-5">
+                <div class="col form-floating">
+
+                    <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px;"
+                        id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Comments</label>
+
+
+                </div>
+            </div>
+            <button class="btn rounded-3 mt-md-5 me-md-5 py-md-2 px-md-5 text-light float-end">Submit</button>
+        </div>
+
+    </section>
+    <footer class="footer-area">
+        <div class="container pt-5">
+            <div class="row d-flex align-items-center justify-content-center pt-5">
+                <div class="col-md-8 pt-5 text-center">
+                    <p>You can also mail us to hello@phosphenes.co & we shall get back to you at the earliest. <br>
+                    </p>
+                    <br>
+                    <p>Address:PO Box 692721, Dubai,UAE</p>
+                </div>
+            </div>
+        </div>
+        <div class="container footer_logo mt-5 d-flex  justify-content-center">
+            <figure>
+                <img src="../navbars/phosphene/logo.png" class="img-fluid" alt="footer logo">
+                <figcaption>
+                    Insight & Innovation Agency
+                </figcaption>
+            </figure>
+           
+        </div>
+        <div class="container footer_logo mt-5 d-flex  justify-content-center">
+        <p class="fs-4">
+            &copy; 2021 phosphenes | All Rights Reserved
+        </p>
+        </div>
+        <div class=" container-fluid bg-dark" style="height: 100px;">
+
+        </div>
+    </footer>
+</body>
+
+</html>
